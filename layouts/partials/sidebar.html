@@ -3,6 +3,7 @@
     {{ range $w := .Site.Params.widgets }}
       <!-- $ 传递全局上下文 -->
       {{- partial  (printf "_widgets/%s.html" $w) $ }}
+      <hr></hr>
     {{- end }}
   </div>
 </aside>
