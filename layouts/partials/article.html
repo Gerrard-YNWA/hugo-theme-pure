@@ -23,6 +23,8 @@
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       {{ .Content }}
+      <hr></hr>
+      {{- partial "post/wechat-subscriber.html" . }}
     </div>
     <div class="article-footer">
       {{- partial "post/copyright.html" . }}

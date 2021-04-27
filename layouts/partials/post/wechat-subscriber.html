@@ -1,0 +1,7 @@
+{{- $wechat_subscriber := .Site.Params.wechat_subscriber }}
+{{- with $wechat_subscriber.enable }}
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="{{- $wechat_subscriber.qcode | absURL }}" alt="wechat" style="width: 200px; max-width: 100%;"/>
+    <div>{{ $wechat_subscriber.description }}</div>
+</div>
+{{- end }}
