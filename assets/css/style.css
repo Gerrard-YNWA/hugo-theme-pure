@@ -5172,6 +5172,10 @@ table table {
   content: "\e724";
 }
 
+.icon-users-fill:before {
+  content: "\e60b";
+}
+
 .icon-eye-fill:before {
   content: "\e64f";
 }
@@ -9458,4 +9462,10 @@ body.okayNav-loaded {
   margin: 0 0 10px;
   border-left: 3px solid #ffcc00;
   background-color: #fffae6;
+}
+
+.busuanzi_site_uv:after {
+  content: "|";
+  padding-left: 10px;
+  padding-right: 10px;
 }
