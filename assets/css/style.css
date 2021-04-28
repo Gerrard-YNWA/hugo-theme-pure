@@ -9464,8 +9464,8 @@ body.okayNav-loaded {
   background-color: #fffae6;
 }
 
-.busuanzi_site_uv:after {
+.busuanzi_container_site_uv:after {
   content: "|";
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
