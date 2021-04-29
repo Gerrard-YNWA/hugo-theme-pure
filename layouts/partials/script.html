@@ -33,7 +33,7 @@
                 UNTITLED: '{{ T "insight_untitled"}}',
             },
             ROOT_URL: '{{ .Site.BaseURL }}',
-            CONTENT_URL: '{{ print .Site.BaseURL "/searchindex.json" | safeURL }} ',
+            CONTENT_URL: "/searchindex.json",
         };
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
@@ -41,6 +41,7 @@
 {{- $insight := resources.Get "js/insight.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{- $insight.Permalink }}" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+{{- if eq .Kind "page" }}
 <script>
     tocbot.init({
         // Where to render the table of contents.
@@ -53,6 +54,7 @@
         hasInnerContainers: true,
     });
 </script>
+{{- end }}
 {{- if eq .Type "repository" }}
 {{- partial "_script/repository.html" . }}
 {{- end}}
