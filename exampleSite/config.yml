@@ -169,6 +169,13 @@ params:
   pv:
     busuanzi:
       enable: false # 不蒜子统计
+      site_uv: true
+      site_uv_header: 访问人数
+      site_uv_footer:
+      site_pv: true
+      site_pv_header: 总访问量
+      site_pv_footer: 次
+      page_pv: false
     leancloud:
       enable: false # leancloud统计
       app_id: # leancloud <AppID>
@@ -202,3 +209,10 @@ params:
     - tag
     - recent_posts
 
+wechat_subscriber:
+    enable: true
+    qcode: /uploads/wechat-qcode.jpg
+    description: subscribe to my blog by scanning my public wechat account
+
+  jinrishici:
+    enable: true
